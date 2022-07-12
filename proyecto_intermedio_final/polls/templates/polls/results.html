@@ -1,9 +1,9 @@
-    {%  extends "Tienda_Pastas/index.html"%}
+    {%  extends "tienda_geek/base.html"%}
     {% load static %}
         {% block extrahead %}
-    <link href="{% static 'Encuestas/css/style_encuestas.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'Encuestas/style.css'%}">
-    <link rel="stylesheet" href="{% static 'Encuestas/detail.css'%}">
+    <link href="{% static 'polls/css/style_polls.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'polls/style.css'%}">
+    <link rel="stylesheet" href="{% static 'polls/detail.css'%}">
     {% endblock %}
     {% block content %}
     <h1>{{question.question_text}}</h1>
@@ -15,6 +15,6 @@
 
         {% endfor %}
     </ul>
-    <a href="{% url 'Encuestas:detail' question.id %}">Te gustaria votar de nuevo?</a>
+    <a href="{% url 'polls:detail' question.id %}">Te gustaria votar de nuevo?</a>
     <!-- Footer -->
 {% endblock %}
